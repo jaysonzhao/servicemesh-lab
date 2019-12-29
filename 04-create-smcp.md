@@ -20,7 +20,7 @@ in large organizations where different business units would share the same clust
 
 5. Deploy the istio friendly applications
    ```console
-   for pole in "north" "south"; do for egde in "east" "west"; do; oc -n ${pole}-${edge} apply -f apps/01-sleep-with-sidecar.yaml; oc -n ${pole}-${edge} apply -f apps/05-httpbin-with-sidecar.yaml; done; done
+   for pole in "north" "south"; do for egde in "east" "west"; do oc -n ${pole}-${edge} apply -f apps/01-sleep-with-sidecar.yaml; oc -n ${pole}-${edge} apply -f apps/05-httpbin-with-sidecar.yaml; done; done
    ```
 
 6. And test north communication...
